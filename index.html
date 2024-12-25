@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingushetia Website</title>
+  <!-- SEO / Open Graph мета-данные (по желанию) -->
+  <meta name="description" content="Описание вашего сайта: события, новости и культура Ингушетии.">
+  <meta property="og:title" content="Ingushetia Website">
+  <meta property="og:description" content="Описание сайта">
+  <meta property="og:image" content="images/n1.png">
+  <meta property="og:url" content="https://example.com">
+
+  <!-- Подключение шрифтов и стилей -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Подключение библиотеки AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Ingushetia Republic</h1>
+
+    <!-- Кнопка-гамбургер -->
+    <button class="menu-toggle" aria-label="Открыть меню"></button>
+    
+    <nav role="navigation" aria-label="Основное меню">
+      <div class="menu-container">
+        <ul class="menu">
+          <li><a href="#news">Новости</a></li>
+          <li><a href="#ads">Объявления</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Переключатели темы и языка -->
+    <div class="theme-switch">
+      <label for="dark-mode">Тёмный режим:</label>
+      <input type="checkbox" id="dark-mode">
+    </div>
+
+    <div class="language-switch">
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+  </header>
+
+  <!-- Блок погоды -->
+  <section id="weather">
+    <h2 data-lang-key="weather">Прогноз погоды</h2>
+    <div id="weather-info">Загрузка данных...</div>
+  </section>
+
+  <main>
+    <!-- Новости -->
+    <section id="news">
+      <h2 data-lang-key="news-title">Новости</h2>
+      <div class="news-container">
+        <div class="news-card">
+          <img src="images/n1.png" alt="Новость 1" class="news-image">
+          <div class="news-content">
+            <h3 class="news-title">Лучший программист Магомед Тунгоев</h3>
+            <p class="news-description">Краткое описание новости 1. Дата публикации: 01.12.2024</p>
+            <a href="#" class="news-link">Читать далее</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="images/n1.png" alt="Новость 2" class="news-image">
+          <div class="news-content">
+            <h3 class="news-title">Магомед  Тунгоев заработал свыше 10млн.руб.</h3>
+            <p class="news-description">Краткое описание новости 2. Дата публикации: 02.12.2024</p>
+            <a href="#" class="news-link">Читать далее</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="images/n1.png" alt="Новость 3" class="news-image">
+          <div class="news-content">
+            <h3 class="news-title">Лучший сайт на свете.</h3>
+            <p class="news-description">Краткое описание новости 3. Дата публикации: 03.12.2024</p>
+            <a href="#" class="news-link">Читать далее</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Объявления -->
+    <section id="ads">
+      <h2 class="fade-in-start" data-lang-key="ads">Объявления</h2>
+      <div class="ads-cards">
+        <div class="card" data-category="real-estate">
+          <h3>Продаётся дом</h3>
+          <p>Описание объявления.</p>
+        </div>
+        <div class="card" data-category="jobs">
+          <h3>Требуется сотрудник</h3>
+          <p>Описание объявления.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery">
+      <h2 class="fade-in-start" data-lang-key="gallery">Галерея</h2>
+      <div class="gallery-filters">
+        <button data-filter="all">Все</button>
+        <button data-filter="nature">Природа</button>
+        <button data-filter="architecture">Архитектура</button>
+      </div>
+      <div class="gallery">
+        <img src="images/photo1.jpeg" alt="Фото 1" class="gallery-image" data-category="nature">
+        <img src="images/photo2.jpeg" alt="Фото 2" class="gallery-image" data-category="architecture">
+        <img src="images/photo3.jpeg" alt="Фото 3" class="gallery-image" data-category="nature">
+        <img src="images/photo4.jpeg" alt="Фото 4" class="gallery-image" data-category="architecture">
+        <img src="images/photo5.jpeg" alt="Фото 5" class="gallery-image" data-category="nature">
+      </div>
+    </section>
+  </main>
+
+  <!-- История Ингушетии -->
+  <section id="history">
+    <h2 data-lang-key="history-title" class="fade-in-start">История Ингушетии</h2>
+    <p data-lang-key="history-description">
+      Ингушетия – один из древнейших регионов Северного Кавказа, богатый культурным и историческим наследием.
+    </p>
+    <div class="history-content">
+      <div class="history-item">
+        <img src="tower.jpg" alt="Башня Ингушетии" class="history-image">
+        <p data-lang-key="history-fact1">Башни Ингушетии — уникальные памятники архитектуры, построенные в Средние века.</p>
+      </div>
+      <div class="history-item">
+        <img src="traditions.jpg" alt="Традиции Ингушетии" class="history-image">
+        <p data-lang-key="history-fact2"> Ингушский народ славится своими традициями гостеприимства и уважения.</p>
+      </div>
+      <div class="history-item">
+        <img src="culture.JPG" alt="Культура Ингушетии" class="history-image">
+        <p data-lang-key="history-fact3">Всегда. Везде. Ингуши.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h3 class="fade-in-start" data-lang-key="faq">FAQ</h3>
+    <p>Тут будут часто задаваемые вопросы.</p>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact">
+    <h3 class="fade-in-start" data-lang-key="contact">Контакты</h3>
+    <p>Здесь будет информация о контактах.</p>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>&copy; 2024 Ingushetia Website. Все права защищены.</p>
+  </footer>
+
+  <!-- Скрипт JS -->
+  <script src="js/script.js"></script>
+  <button id="scroll-to-top">Наверх</button>
+</body>
+</html>

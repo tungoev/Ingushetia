@@ -1,0 +1,488 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0;
+    color: #333333;
+  }
+  
+  header {
+    background-image: url('images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+    z-index: 2; /* Чтобы текст был поверх фонового изображения */
+  }
+  
+  /* Меню */
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    color: #CBA135;
+    transform: scale(1.05); /* Чуть увеличиваем текст */
+  }
+  
+  /* Тёмный режим переключатель */
+  .theme-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Переключатели языка */
+  .language-switch {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  .lang-btn {
+    background: #6D1A36;
+    color: #FAF3E0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .lang-btn:hover {
+    background: #CBA135;
+  }
+  
+  /* Секции */
+  section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #6D1A36;
+    text-align: center;
+  }
+  section p,
+  section label {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333333;
+  }
+  
+  /* Новости */
+  #news {
+    margin: 40px auto;
+    padding: 20px;
+    background: #F5F5F5;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  #news h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .news-card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    background: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  .news-image {
+    width: 150px;
+    height: 70px;
+    margin-top: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+    border-bottom: 2px solid #7c7676;
+  }
+  .news-content {
+    padding: 15px;
+  }
+  .news-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+    font-weight: 600;
+  }
+  .news-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  .news-link {
+    text-decoration: none;
+    color: #6D1A36;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  .news-link:hover {
+    color: #8C233D;
+  }
+  
+  /* История Ингушетии */
+  #history {
+    margin: 20px auto;
+    padding: 20px;
+    background: #FAF3E0;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+  }
+  #history h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #6D1A36;
+  }
+  .history-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .history-item {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  .history-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .history-item p {
+    font-size: 1rem;
+    color: #333333;
+    margin: 0;
+  }
+  
+  /* Объявления */
+  .ads-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #CBA135;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Галерея */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  .fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .fullscreen-overlay .close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  .fullscreen-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .fullscreen-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+  }
+  .fullscreen-content img {
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: auto;
+  }
+  
+  /* Анимация */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* Footer */
+  footer {
+    background: #6D1A36;
+    color: #FAF3E0;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .hidden {
+    display: none;
+  }
+  button.clicked {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Погода */
+  #weather {
+    max-width: 300px;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #88c1f0de, #6be48a);
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.856);
+  }
+  #weather-info {
+    font-size: 1rem;
+    color: #FAF3E0;
+  }
+  #weather-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  #weather-info p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  
+  /* Тёмный режим */
+  body.dark-mode {
+    background-color: #121212;
+    color: #FAF3E0;
+  }
+  body.dark-mode header {
+    background: linear-gradient(135deg, #1F1F1F, #333333);
+  }
+  body.dark-mode .menu li a {
+    color: #FAF3E0;
+  }
+  body.dark-mode button {
+    background: #333333;
+    color: #FAF3E0;
+    border: 1px solid #666666;
+  }
+  body.dark-mode #weather {
+    background: linear-gradient(135deg, #333333, #f3ebeb);
+    color: #FAF3E0;
+  }
+  .theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  .theme-switch input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    appearance: none;
+    background: #CBA135;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  .theme-switch input[type="checkbox"]:checked {
+    background: #6D1A36;
+  }
+  .theme-switch input[type="checkbox"]::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #FAF3E0;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  }
+  .theme-switch input[type="checkbox"]:checked::after {
+    transform: translateX(20px);
+  }
+  
+  /* Кнопка "Наверх" */
+  #scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #6D1A36;
+    color: #FAF3E0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Анимация появления заголовков (fade-in-start) */
+  .fade-in-start {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 3s ease;
+  }
+  
+  /* Адаптивное меню (гамбургер) */
+  .menu-toggle {
+    display: none; /* по умолчанию скрыто на больших экранах */
+    width: 35px;
+    height: 35px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 60px; 
+    right: 20px;
+    cursor: pointer;
+    z-index: 999; /* выше остальных */
+  }
+  /* Две полоски через псевдоэлементы */
+  .menu-toggle::before,
+  .menu-toggle::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    margin: 6px 0;
+    transition: 0.3s ease;
+  }
+  
+  .menu-container {
+    display: block; /* на больших экранах видно */
+  }
+  
+  /* Медиазапрос */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* показываем на мобильных */
+    }
+  
+    .menu-container {
+      display: none; /* изначально скрыто */
+      position: absolute;
+      top: 100px;
+      right: 0;
+      background-color: #6D1A36;
+      width: 200px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  
+    .menu-container.open {
+      display: block; /* при клике на гамбургер */
+    }
+  
+    .menu-container .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu-container .menu li a {
+      color: #FAF3E0;
+      font-size: 1.2rem;
+    }
+  }
+  
